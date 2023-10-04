@@ -28,7 +28,10 @@ def main():
 
     for i in lawnmower_billboard:
         if in_bounds(x_bounds, i[0]) != in_bounds(y_bounds, i[1]):
-           ans = get_value_in_bound(x_bounds, i[0]) * get_value_in_bound(y_bounds, i[1])
+            ans = get_value_in_bound(x_bounds, i[0]) * get_value_in_bound(y_bounds, i[1])
+
+    if min(X1, X2) <= x1 <= max(X1, X2) and min(X1, X2) <= x2 <= max(X1, X2) and min(Y1, Y2) <= y1 <= max(Y1, Y2) and min(Y1, Y2) <= y2 <= max(Y1, Y2):
+        ans= 0
 
     with open('billboard.out', 'w') as f:
         f.write(str(ans))
