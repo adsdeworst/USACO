@@ -14,7 +14,7 @@ def counting_cows_in_region(cows, a, b):
 
 def main():
     with open("balancing.in", "r") as f:
-        n, b = map(int, f.readline().split())
+        n = int(f.readline())
         cows = []
         for _ in range(n):
             cows.append(list(map(int, f.readline().split())))

@@ -25,7 +25,7 @@ def judging_two_lists(plain_cow_group, spotty_cow_group):
         return False
 
 def main():
-    with open("cowonomics.in", 'r') as f:
+    with open("cownomics.in", 'r') as f:
         N, M = list(map(int, f.readline().split()))
         plain_cow_genomes = []
         spotty_cow_genomes = []
