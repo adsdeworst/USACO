@@ -7,7 +7,7 @@ def main():
 
     index = 0
     while index != len(S):
-        if S[index] == censor_string[0]:
+        if (S[index] in censor_string) == True:
             #do someting
             exactment_factor = 0
             for i in range(len(censor_string)):
@@ -26,6 +26,9 @@ def main():
                     index += i
                     break
         else:
+            if len(occurences_list) != 0:
+                answer_string += S[index-sum_list(occurences_list):index]
+                occurences_list=[]
             answer_string += S[index]
             index += 1
 
@@ -34,5 +37,11 @@ def main():
 def go_back(index, val):
     index = index - val
     return index
+
+def sum_list(list):
+    sum = 0
+    for all in list:
+        sum += all
+    return sum
 
 main()
