@@ -1,5 +1,5 @@
 def main():
-    with open('input_output_files\censoring.in', 'r') as f:
+    with open('censor.in', 'r') as f:
         S = f.readline().strip("\n")
         censor_string = f.readline()
         answer_string = ""
@@ -32,7 +32,8 @@ def main():
             answer_string += S[index]
             index += 1
 
-    print(answer_string)
+    with open('censor.out', 'w') as f:
+        f.write(str(answer_string))
 
 def go_back(index, val):
     index = index - val
@@ -44,4 +45,5 @@ def sum_list(list):
         sum += all
     return sum
 
-main()
+if __name__ == "__main__":
+    main()
