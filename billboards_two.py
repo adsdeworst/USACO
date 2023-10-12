@@ -12,7 +12,7 @@ def main():
     ans = 0
 
 
-    if in_rectangle(lawnmower_billboard, cow_feed_billboard[0]) and in_rectangle(lawnmower_billboard, cow_feed_billboard[1]):
+    if in_rectangle(lawnmower_billboard, cow_feed_billboard[0]) == True and in_rectangle(lawnmower_billboard, cow_feed_billboard[1]) == True:
         ans = get_area(lawnmower_billboard[0], lawnmower_billboard[1])
     
     elif in_rectangle(lawnmower_billboard, cow_feed_billboard[0]) == True and in_rectangle(lawnmower_billboard, cow_feed_billboard[1]) == False:
@@ -37,7 +37,8 @@ def main():
         ans = 0
 
     with open('billboard.out', 'w') as f:
-        f.write(str(get_area()ans))
+        f.write(str(ans))
+        print(ans)
 '''
 lawmower_billboard = [(2, 1), (7, 4)]
 cow_feed_billboard = [(5, -1), (10, 3)]
