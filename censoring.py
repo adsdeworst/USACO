@@ -1,10 +1,22 @@
+import datetime
+dt = datetime.datetime.now()
+
+def go_back(index, val):
+    index = index - val
+    return index
+
+def sum_list(list):
+    sum = 0
+    for all in list:
+        sum += all
+    return sum
+
 def main():
     with open('censor.in', 'r') as f:
         S = f.readline().strip("\n")
         censor_string = f.readline()
         answer_string = ""
         occurences_list = []
-
     index = 0
     while index != len(S):
         if (S[index] in censor_string) == True:
@@ -31,19 +43,7 @@ def main():
                 occurences_list=[]
             answer_string += S[index]
             index += 1
-
-    with open('censor.out', 'w') as f:
-        f.write(str(answer_string))
-
-def go_back(index, val):
-    index = index - val
-    return index
-
-def sum_list(list):
-    sum = 0
-    for all in list:
-        sum += all
-    return sum
-
-if __name__ == "__main__":
-    main()
+    print(answer_string)
+main()
+dx = datetime.datetime.now()
+print(dt.microsecond/1000 - dx.microsecond/1000)
